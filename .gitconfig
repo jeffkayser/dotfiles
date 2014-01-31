@@ -1,0 +1,9 @@
+[user]
+	name = Jeff Kayser
+	email = jeff.kayser@gmail.com
+[credential]
+	helper = osxkeychain
+[color]
+	ui = true
+[core]
+	autocrlf = input
