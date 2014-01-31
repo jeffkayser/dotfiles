@@ -1,5 +1,7 @@
 # bash
 
+Assumes an **OS X** environment.
+
 The following must be installed:
 - mkvirtualenvwrapper
 
@@ -17,6 +19,8 @@ I currently have the following bundles installed:
 
 
 # zsh
+
+Assumes an **OS X** environment.
 
 The following must be installed:
 - oh-my-zsh
