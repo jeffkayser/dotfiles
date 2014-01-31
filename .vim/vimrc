@@ -1,0 +1,79 @@
+set nocompatible             " vim defaults
+set ls=2                     " always show status line
+set scrolloff=5              " keep 5 lines when scrolling
+set ruler
+set visualbell t_vb=
+set ttyfast
+
+if has("gui_running")
+    set guifont=Monospace\ 10
+endif
+
+" Syntax highlighting
+if has("syntax")
+  syntax on
+endif
+
+" Dark background color
+set background=dark
+
+" Evening color scheme
+colorscheme ir_black
+
+if has("autocmd")
+  " Go to last position in file
+  autocmd BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
+
+  " Load indentation rules and plugins for detected filetype
+  filetype plugin indent on
+
+  autocmd BufRead *.py set makeprg=python\ -c\ \"import\ py_compile,sys;\ sys.stderr=sys.stdout;\ py_compile.compile(r'%')\"
+  autocmd BufRead *.py set efm=%C\ %.%#,%A\ \ File\ \"%f\"\\,\ line\ %l%.%#,%Z%[%^\ ]%\\@=%m
+  autocmd BufRead *.py nmap <F5> :!python %<CR>
+endif
+
+set showcmd      " Show (partial) command in status line
+set showmatch    " Show matching brackets
+set ignorecase   " Case-insensitive matching
+set smartcase    " Smart case matching
+set incsearch    " Incremental search
+set autowrite    " Save before commands like :next and :make
+set hidden       " Hide abandoned buffers
+"set mouse=a      " Enable mouse in all modes
+
+set number
+set smartindent
+set selection=exclusive
+set selectmode=mouse,key
+set softtabstop=4
+
+set expandtab
+set shiftwidth=4
+set tabstop=4
+set nobackup
+set autoindent
+set hlsearch
+
+" Key mappings
+map <C-Tab> <C-W><C-W>
+map <S-Right> :bnext<CR>
+map <S-Left> :bprevious<CR>
+
+" Python stuff
+if !exists("autocommands_loaded")
+  let autocommands_loaded = 1
+  autocmd BufRead,BufNewFile,FileReadPost *.py source ~/.vim/python
+endif
+
+" This beauty remembers where you were the last time you edited the file, and returns to the same position.
+au BufReadPost * if line("'\"") > 0|if line("'\"") <= line("$")|exe("norm '\"")|else|exe "norm $"|endif|endif
+
+" pathogen.vim
+execute pathogen#infect()
+
+" better rainbow parentheses
+au VimEnter * RainbowParenthesesToggle
+au Syntax * RainbowParenthesesLoadRound
+au Syntax * RainbowParenthesesLoadSquare
+au Syntax * RainbowParenthesesLoadBraces
+
