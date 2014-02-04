@@ -37,6 +37,7 @@ export PATH=$PATH:~/bin:~/bin/ec2/bin
 
 # Sententia
 export JAVA_HOME=`/usr/libexec/java_home`
+export JAVA_OPTS="-Xmx2g -server -XX:MaxPermSize=256m -Djava.net.preferIPv4Stack=true -Djava.awt.headless=true"
 export EC2_HOME=$HOME'/bin/ec2'
 export TORQUEBOX_HOME=$HOME/.immutant/current
 export JRUBY_HOME="$HOME/.immutant/current/jruby" 
