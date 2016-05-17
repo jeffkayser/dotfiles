@@ -5,7 +5,10 @@ ZSH=$HOME/.oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-export ZSH_THEME="jreese"
+# export ZSH_THEME="jreese"
+# export ZSH_THEME="crunch"
+# export ZSH_THEME="kafeitu"
+export ZSH_THEME="wezm"
 
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
@@ -37,7 +40,7 @@ export PATH=$PATH:~/bin:~/bin/ec2/bin
 
 # Sententia
 export JAVA_HOME=`/usr/libexec/java_home`
-export JAVA_OPTS="-Xmx2g -server -XX:MaxPermSize=256m -Djava.net.preferIPv4Stack=true -Djava.awt.headless=true"
+export JAVA_OPTS="-Xmx4g -server -XX:MaxPermSize=512m -Djava.net.preferIPv4Stack=true -Djava.awt.headless=true"
 export EC2_HOME=$HOME'/bin/ec2'
 export TORQUEBOX_HOME=$HOME/.immutant/current
 export JRUBY_HOME="$HOME/.immutant/current/jruby" 
@@ -45,14 +48,28 @@ export PATH=$TORQUEBOX_HOME/jruby/bin:$PATH
 
 alias ls='ls -AFG'
 alias ll='ls -l'
-alias v='vim'
-
 
 # Python virtualenvwrapper
 export WORKON_HOME="$HOME/dev/.virtualenv/"
-source /usr/local/bin/virtualenvwrapper.sh
+source /usr/local/bin/virtualenvwrapper_lazy.sh
 
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 export PATH="/usr/local/sbin:$PATH"
 
 bindkey '^R' history-incremental-search-backward
+
+export VAGRANT_HOME=/Volumes/Data/VMs/vagrant
+
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+
+export VAGRANT_HOME=/Users/jeffmk/.vagrant.d
+
+export SASS_SASSC_PATH=`which sassc`
+
+export PATH="$PATH:$HOME/Library/Android/sdk/platform-tools:$HOME/Library/Android/sdk/build-tools/21.1.2"
+
+# Update prompt time each second until next command executed
+RPROMPT="$RPROMPT %{$fg_bold[black]%}%D{%H:%M:%S}%{$reset_color%}"
+TMOUT=1
+TRAPALRM() {
+    zle reset-prompt
+}
