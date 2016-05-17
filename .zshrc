@@ -36,7 +36,7 @@ source $ZSH/oh-my-zsh.sh
 # Set default user to hide user@host
 DEFAULT_USER=jeffmk@mbp
 
-export PATH=$PATH:~/bin:~/bin/ec2/bin
+export PATH=/usr/local/Cellar/sqlite/3.11.0/bin:$PATH:~/bin:~/bin/ec2/bin
 
 # Sententia
 export JAVA_HOME=`/usr/libexec/java_home`
@@ -73,3 +73,6 @@ TMOUT=1
 TRAPALRM() {
     zle reset-prompt
 }
+
+# Turn off homebrew analytics
+export HOMEBREW_NO_ANALYTICS=1
