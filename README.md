@@ -8,6 +8,8 @@ The following must be installed:
 
 # vim
 
+Assumes vim is built with Python support (such as by installing `vim-nox`).
+
 The following must be installed:
 - [pathogen.vim](https://github.com/tpope/vim-pathogen) ([vim.org](http://www.vim.org/scripts/script.php?script\_id=2332))
 
