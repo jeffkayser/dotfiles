@@ -8,6 +8,9 @@ The following must be installed:
 
 # vim
 
+The following must be installed:
+- [pathogen.vim](https://github.com/tpope/vim-pathogen) ([vim.org](http://www.vim.org/scripts/script.php?script\_id=2332))
+
 The `bundle/` directory is not included.
 
 I currently have the following bundles installed:
