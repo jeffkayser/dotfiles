@@ -1,0 +1,12 @@
+[user]
+  name = Jeff Kayser
+  email = jeff.kayser@gmail.com
+[color]
+  ui = auto
+[merge]
+  ff = only
+[core]
+  autocrlf = input
+[push]
+  default = simple
+
