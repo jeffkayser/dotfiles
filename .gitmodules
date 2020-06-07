@@ -1,0 +1,21 @@
+[submodule "vim/pack/jeffmk/start/eregex"]
+	path = vim/pack/jeffmk/start/eregex
+	url = https://github.com/othree/eregex.vim
+[submodule "vim/pack/jeffmk/start/html5"]
+	path = vim/pack/jeffmk/start/html5
+	url = https://github.com/othree/html5.vim
+[submodule "vim/pack/jeffmk/start/rainbow_parentheses"]
+	path = vim/pack/jeffmk/start/rainbow_parentheses
+	url = https://github.com/kien/rainbow_parentheses.vim
+[submodule "vim/pack/jeffmk/opt/vim-classpath"]
+	path = vim/pack/jeffmk/opt/vim-classpath
+	url = https://github.com/tpope/vim-classpath
+[submodule "vim/pack/jeffmk/start/vim-clojure-static"]
+	path = vim/pack/jeffmk/start/vim-clojure-static
+	url = https://github.com/guns/vim-clojure-static
+[submodule "vim/pack/jeffmk/start/vim-css3-syntax"]
+	path = vim/pack/jeffmk/start/vim-css3-syntax
+	url = https://github.com/hail2u/vim-css3-syntax
+[submodule "vim/pack/jeffmk/start/vim-fireplace"]
+	path = vim/pack/jeffmk/start/vim-fireplace
+	url = https://github.com/tpope/vim-fireplace
