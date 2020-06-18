@@ -19,3 +19,6 @@
 [submodule "vim/pack/jeffmk/start/vim-fireplace"]
 	path = vim/pack/jeffmk/start/vim-fireplace
 	url = https://github.com/tpope/vim-fireplace
+[submodule "vim/pack/jeffmk/start/vim-airline"]
+	path = vim/pack/jeffmk/start/vim-airline
+	url = https://github.com/vim-airline/vim-airline
